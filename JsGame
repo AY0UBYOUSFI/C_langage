@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeux tic tac tok</title>
+</head>
+<body>
+    <fieldset class="liste01">
+   <table>
+    <tr><td id="c1" onclick="showx('c1')" ondblclick="showy('c1')"></td><td id="c2" onclick="showx('c2')" ondblclick="showy('c2')"></td><td id="c3" onclick="showx('c3')" ondblclick="showy('c3')"></td></tr>
+    <tr><td id="c4" onclick="showx('c4')" ondblclick="showy('c4')"></td><td id="c5" onclick="showx('c5')" ondblclick="showy('c5')"></td><td id="c6" onclick="showx('c6')" ondblclick="showy('c6')"></td></tr>
+    <tr><td id="c7" onclick="showx('c7')" ondblclick="showy('c7')"></td><td id="c8" onclick="showx('c8')" ondblclick="showy('c8')"></td><td id="c9" onclick="showx('c9')" ondblclick="showy('c9')"></td></tr>
+   </table>
+   <p  onclick="clearxo()">GAME X / 0</p>
+</fieldset>
+<br><br>
+<fieldset class="liste02">
+   <input type="button" value="SHOW THE WINER" onclick="alertwiner()">
+<h3 id="result"></h3>
+<div>
+<h4>play X :</h4>
+<input type="number"  id="px" value='0'>
+<h4>play O :</h4>
+<input type="number"  id="po" value='0'>
+</div>   
+</fieldset>
+
+   <style>
+    p{
+        font-size: 20px;
+        font-family: cursive;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    .liste02{
+        margin-left: 220px;
+        margin-top: -308px;
+        
+         
+    }
+.liste01{
+height: 250px; 
+    }
+    #px,#po{
+        width: 178px;
+    }
+    h4{
+        font-size: 15px;
+        font-family: cursive;
+        color: #000000;
+
+    }
+    td{
+        user-select: none;
+        border: 1px solid rgb(0, 0, 0);
+        width: 40px;height: 60px;
+        border-radius: 5px;
+        padding-left: 15px;
+        font-size: 40px;
+        font-family: cursive;
+        background-color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+    td:hover{
+        background-color: rgb(20, 20, 20);
+    }
+    h3{
+        border: 0px solid black;
+        border-radius: 5px;
+        font-size: 13px;
+        font-family: cursive; 
+        width: 180px;
+        min-height: 30px;
+    }
+    input{
+        border: 0.2px solid black;
+        border-radius: 5px;
+        font-size: 17.4px;
+        font-family: cursive;
+        background: #000000;
+        color: white;
+    }
+    fieldset{
+        border: solid 3px rgb(255, 255, 255);
+        border-radius: 20px;
+        background-color: rgba(29, 29, 29, 0.562);
+        width: 190px;
+    }
+   </style>
+
+   <script>
+    var some=document.getElementById('po').value;
+    var some1=document.getElementById('px').value;
+    function incO(){
+        some++;
+        document.getElementById('po').value=some;
+        document.getElementById('po').innerHTML=Number(some);
+        document.getElementById('po').style.color='blue';
+
+    }
+    function incX(){
+        some1++;
+        document.getElementById('px').value=some1;
+        document.getElementById('px').innerHTML=Number(some1);
+        document.getElementById('px').style.color='red';
+    }
+    function clearxo(){
+        for(var i=1;i<=9;i++){
+            document.getElementById('c'+i).innerHTML=''
+            document.getElementById('c'+i).value='';
+        }
+    }
+    function winer(){
+        if(((document.getElementById('c2').value=='O')&&(document.getElementById('c5').value=='O')&&(document.getElementById('c8').value=='O')) || ((document.getElementById('c1').value=='O')&&(document.getElementById('c2').value=='O')&&(document.getElementById('c3').value=='O')) || ((document.getElementById('c1').value=='O')&&(document.getElementById('c5').value=='O')&&(document.getElementById('c9').value=='O')) || ((document.getElementById('c1').value=='O')&&(document.getElementById('c4').value=='O')&&(document.getElementById('c7').value=='O')) || ((document.getElementById('c4').value=='O')&&(document.getElementById('c5').value=='O')&&(document.getElementById('c6').value=='O')) || ((document.getElementById('c7').value=='O')&&(document.getElementById('c8').value=='O')&&(document.getElementById('c9').value=='O')) || ((document.getElementById('c3').value=='O')&&(document.getElementById('c6').value=='O')&&(document.getElementById('c9').value=='O')) || ((document.getElementById('c3').value=='O')&&(document.getElementById('c5').value=='O')&&(document.getElementById('c7').value=='O'))){
+        document.getElementById('result').innerHTML=' PLAY O WINE ';
+        document.getElementById('result').style.color='blue';
+        setTimeout('incO()',1000);
+        setTimeout('clearxo()',1000);
+    }
+        else if(((document.getElementById('c2').value=='X')&&(document.getElementById('c5').value=='X')&&(document.getElementById('c8').value=='X'))||((document.getElementById('c1').value=='X')&&(document.getElementById('c2').value=='X')&&(document.getElementById('c3').value=='X')) || ((document.getElementById('c1').value=='X')&&(document.getElementById('c5').value=='X')&&(document.getElementById('c9').value=='X')) || ((document.getElementById('c1').value=='X')&&(document.getElementById('c4').value=='X')&&(document.getElementById('c7').value=='X')) || ((document.getElementById('c4').value=='X')&&(document.getElementById('c5').value=='X')&&(document.getElementById('c6').value=='X')) || ((document.getElementById('c7').value=='X')&&(document.getElementById('c8').value=='X')&&(document.getElementById('c9').value=='X')) || ((document.getElementById('c3').value=='X')&&(document.getElementById('c6').value=='X')&&(document.getElementById('c9').value=='X')) || ((document.getElementById('c3').value=='X')&&(document.getElementById('c5').value=='X')&&(document.getElementById('c7').value=='X'))){
+        document.getElementById('result').innerHTML='PLAY X WINE ';
+        document.getElementById('result').style.color='red';
+        setTimeout('incX()',1000);
+        setTimeout('clearxo()',1000);
+    }
+        else{
+        document.getElementById('result').style.color='black';
+        document.getElementById('result').innerHTML='NULL';
+        
+        }
+    }
+    function showx(ptr){
+        document.getElementById(ptr).style.color='red';
+        document.getElementById(ptr).innerHTML='X';
+        document.getElementById(ptr).value='X';
+        winer();
+    }
+    function showy(ptr){
+        document.getElementById(ptr).style.color='blue';
+        document.getElementById(ptr).innerHTML='O';
+        document.getElementById(ptr).value='O';
+        winer();
+    }
+    function alertwiner(){
+        if(some>some1)
+        alert('play O win');
+        else if(some<some1)
+        alert('play X win');
+        else
+        alert('NULL');
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="C:\Users\PC-ELL\Downloads\fontawesome-free-6.4.0-web\FONT\fontawesome-free-6.4.0-web\css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION DE CLINIC</title>
+</head>
+<body>   
+    <div class="all">
+           <div class="head">
+                 <fieldset class="head">
+                    <h1 onclick="s.play()">GESTION DE CLINIQUE</h1>
+                 </fieldset>
+           </div>
+           <div class="body">
+            <fieldset style="height: 1000px;" class="body">
+                <div id="text">
+                    <table>
+                        <tr>
+                            <td>
+            <h2>Bonjour et bienvenue sur notre site web de gestion de clinique ! </h2>
+<h3>Notre plateforme de gestion de clinique en ligne vous offre une solution pratique et efficace pour la <br>
+gestion de vos dossiers de patients. Avec notre interface conviviale, vous pouvez facilement organiser les rendez-vous,
+ les prescriptions et les informations médicales de <br> vos patients en un seul endroit, ce qui vous permet de vous concentrer <br>
+ sur ce qui compte vraiment : la santé de vos ,<br><br>
+ Notre système de gestion de rendez-vous est facile à utiliser et vous permet de gérer facilement vos disponibilités et celles de votre personnel. Vous pouvez <br>
+facilement voir les créneaux horaires disponibles, planifier des rendez-vous, envoyer des rappels à vos patients et visualiser les informations de rendez-vous passés et à venir.
+<br><br>
+Notre service de gestion de prescriptions facilite également la gestion des prescriptions de vos patients.
+ Vous pouvez facilement consulter et gérer les prescriptions en cours, ajouter de nouvelles prescriptions et 
+ renouveler des prescriptions existantes. Vous pouvez également consulter l'historique 
+ des prescriptions de vos patients pour garantir la continuité des <br>
+Notre plateforme de gestion de clinique en ligne est conçue pour vous aider à <br>
+fournir les meilleurs soins possibles à vos patients. Nous sommes là pour <br> 
+vous aider à réussir dans votre pratique médicale
+<br> et à offrir une expérience de soins de qualité à vos. <br><br>
+</h3>  
+                </div> 
+                          </td>
+                          <td>
+                            <div >
+                            <fieldset class="fichinpute">
+                                <h2 style="text-decoration: underline;"><i class="fas fa-cloud"></i>Se connecter</h2><br>
+                                <form action="http://localhost/tp/minitp.php" method="post">
+                                <p>nome :</p>
+                                <input type="text" name="nome" id="nome" placeholder="nome de patient ..." required>
+                                <p>prenome :</p>
+                                <input type="text" name="prenome" id="prenome" placeholder="prenome de patient ..." required>
+                                <p>numero de telephone :</p>
+                                <input type="number" name="numero" id="numero" placeholder="numero de patient ..." required>
+                                <p>id personne :</p>
+                                <input type="number" name="id" id="id" placeholder="id de patient ..."><br>
+                                <p>Clinque :</p>
+                                <select name="clinic" id="clinic">
+                                    <option value="" id="op">Polyclinique soukahrase</option>
+                                    <option value="" id="op">Clinique Al Azhar Annaba</option>
+                                    <option value="" id="op">Clinique El Ferdous Tebessa</option>
+                                    <option value="" id="op">Clinique Rameau Doliver DE Bjaia</option>
+                                    <option value="" id="op">La Grande Clinice Mazdaouat Khenchela</option>
+                                    <option value="" id="op">Clinique El Bordj</option>
+                                    <option value="" id="op1">Clinique Ibn Sina Constantin</option>
+                                </select><br><br><br>
+                            </fieldset>
+                            </div>
+                          </td>
+                        </tr>
+                    </table>
+                    <input type="time" name="dat" id="time"><br><br>
+                    <input type="number" name="CHOIX" id="email" placeholder="1:CREE/2:SUPP/3:AFF/4:UPDATE "><br>
+            </fieldset>
+      </div>
+    </div>
+    <input type="submit" value="Envoyer" id="submit" style="opacity: 0.7;background-color: rgba(99, 117, 117, 0.753);width: 1332px;" >
+</form>
+<style>
+.ptr:hover{
+    background-color: rgb(0, 255, 255);
+}
+/* Styles pour le tag h1 */
+h1 {
+  text-align: center;
+  position: relative;
+  animation: animate-h1 3s ease-in-out;
+}
+
+/* Animation pour le tag h1 */
+@keyframes animate-h1 {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Styles pour les champs de saisie */
+#nome, #prenome, #numero, #id, #clinic, #op1, #submit ,#time,#email{
+  opacity: 0.4;
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+  color: #0c0c0c;
+  user-select: none;
+}
+
+/* Styles pour les options */
+select option {
+  opacity: 0.2;
+  background-color: #c2baba;
+  border-radius: 5px;
+  color: black;
+}
+
+/* Style the selected option element */
+select option:checked {
+  background-color: rgba(0, 255, 191, 0.5);
+  color: rgb(0, 0, 0);
+}
+select option:hover{
+    font-size: 25px;
+    text-decoration: double;
+    background-color: #444;
+}
+/* Styles pour la scrollbar */
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+
+/* Styles pour les champs de saisie au survol */
+#nome:hover, #prenome:hover, #numero:hover, #id:hover {
+  opacity: 0.5;
+  width: 460px;
+  font-size: 22px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 1px 1px #fff;
+}
+
+/* Styles pour la boîte de saisie */
+.fichinpute {
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-left: 200px;
+  border: 0.7px solid white;
+  user-select: none;
+}
+
+/* Styles pour le texte */
+#text {
+  color: #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  animation: animate-h1 3s ease-in-out;
+  user-select: none;
+}
+
+/* Styles pour l'ensemble de la page */
+.all {
+  border: 1px solid white;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  background-image: url("C:/endex/backgroundclinic.jpg");
+  background-attachment: fixed;
+}
+
+/* Styles pour l'en-tête */
+.head {
+  opacity: 0.8;
+  user-select: none;
+  font-size: 17px;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  animation: animate-h1 3s ease-in-out;
+}
+
+/* Styles pour le corps de la page */
+.body {
+  border: none;
+}
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+  width: 100px;
+}
+
+/* Change the color of the scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2c2a2a;
+}
+
+</style>
+<script>
+var s=new Audio();
+s.src="C:\sond1.mp3";
+</script>
+</body>
+</html>
